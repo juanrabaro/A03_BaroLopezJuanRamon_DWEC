@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio6</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <script>
+        const Ghost = function() {
+            const colores = ["red", "blue", "yellow", "green", "purple", "orange", "skyblue", "brown", "black", "pink"]
+            var indiceAleatorio = Math.floor(Math.random() * colores.length);
+
+            var colorAleatorio = colores[indiceAleatorio]
+            return colorAleatorio
+        }
+
+        var contenedor = document.body
+
+        for (var i = 0; i < 1000; i++) {
+            var color = Ghost()
+            var div = document.createElement("div")
+
+            div.textContent = color
+            div.style.backgroundColor = color
+            div.style.height = "50px"
+            div.style.width = "100%"
+
+            contenedor.appendChild(div)
+        }
+
+    </script>
+</body>
+</html>
